@@ -10,7 +10,7 @@ fi
 
 export DEBIAN_VERSION=11.6-slim
 export S3FS_VERSION=1.89
-export MIRRORS_SOURCE=mirrors.tuna.tsinghua.edu.cn
+export MIRRORS_SOURCE="mirrors.tuna.tsinghua.edu.cn"
 
 write_dockerignore
 
