@@ -2,8 +2,11 @@
 
 set -eux
 
-cd $(dirname ${BASH_SOURCE[0]}) && pwd || exit 1
-[[ -f "../scripts/lib.sh" ]] && source "../scripts/lib.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" && pwd || exit 1
+if [[ -f "../scripts/lib.sh" ]] ; then
+  # shellcheck source=/dev/null
+  source "../scripts/lib.sh"
+fi
 
 export DEBIAN_VERSION=11.6-slim
 export S3FS_VERSION=1.89
