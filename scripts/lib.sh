@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function write_dockerignore {  
-  cat <<EOF> .dockerignore
+  cat <<EOF>> .dockerignore
 docker-build.sh
 EOF
 }
