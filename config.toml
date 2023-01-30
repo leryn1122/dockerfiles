@@ -1,0 +1,17 @@
+[dependency]
+alpine="3.17.0"
+debian="11.6"
+delve="v1.7.3"
+go="1.19"
+helm="3.10.0"
+s3fs="1.89"
+
+[mirror]
+apk="mirrors.tuna.tsinghua.edu.cn"
+apt="mirrors.tuna.tsinghua.edu.cn"
+debian="mirrors.tuna.tsinghua.edu.cn"
+yum="mirrors.tuna.tsinghua.edu.cn"
+
+[proxy]
+github="https://ghproxy.com/"
+goproxy="https://goproxy.cn,direct"
