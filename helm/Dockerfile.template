@@ -22,7 +22,7 @@ RUN case `uname -m` in \
  && mv linux-${ARCH}/helm /usr/bin/helm \
  && chmod +x /usr/bin/helm \
  && rm -rf linux-${ARCH} \
- && helm plugin install {{ .proxy.github }}https://github.com/chartmuseum/helm-push.git
+ && helm plugin install {{ default "" .proxy.github }}https://github.com/chartmuseum/helm-push.git
 
 WORKDIR /opt
 
