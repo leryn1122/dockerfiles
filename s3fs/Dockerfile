@@ -1,4 +1,4 @@
-FROM debian:{{ .dependency.debian }}-slim
+FROM debian:11.6-slim
 
 LABEL maintainers="Leryn <leryn1122@gmail.com>"
 LABEL description="s3fs fuse"
@@ -8,7 +8,7 @@ ENV MNT_POINT=/var/s3 \
     S3_ENDPOINT='' \
     S3_REGION=''
 
-RUN sed -i "s/deb.debian.org/{{ .mirror.apk }}/g" /etc/apt/sources.list \
+RUN sed -i "s/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list \
  && apt-get update && apt-get install -y \
       s3fs={{ printf "%s-1" .dependency.s3fs }} \
  && apt-get clean \

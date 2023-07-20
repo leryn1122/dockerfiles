@@ -13,7 +13,7 @@ RUN case `uname -m` in \
       s390x)   ARCH=s390x; ;; \
       *) echo "unsupported arch, exit ..."; exit 1; ;; \
     esac \
- && sed -i 's/dl-cdn.alpinelinux.org/{{ .mirror.apk }}/g' /etc/apk/repositories \
+ && sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
  && apk add --update --no-cache \
       curl \
       git \
@@ -22,7 +22,7 @@ RUN case `uname -m` in \
  && mv linux-${ARCH}/helm /usr/bin/helm \
  && chmod +x /usr/bin/helm \
  && rm -rf linux-${ARCH} \
- && helm plugin install {{ default "" .proxy.github }}https://github.com/chartmuseum/helm-push.git
+ && helm plugin install https://ghproxy.com/https://github.com/chartmuseum/helm-push.git
 
 WORKDIR /opt
 
