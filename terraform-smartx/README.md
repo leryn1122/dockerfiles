@@ -30,6 +30,7 @@ Reference:
 ```bash
 wget -O https://github.com/smartxworks/terraform-provider-cloudtower/releases/download/v0.1.9/terraform-provider-cloudtower_0.1.9_linux_amd64.zip
 unzip terraform-provider-cloudtower_0.1.9_linux_amd64.zip
+mv terraform-provider-cloudtower_v0.1.9 terraform-mirrors/registry.terraform.io/smartxworks/cloudtower/0.1.9/linux_amd64
 ```
 
 ### Executable locations
