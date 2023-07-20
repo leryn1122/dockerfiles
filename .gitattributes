@@ -1,0 +1,4 @@
+* text eol=lf
+
+.terraformrc linguist-language=HCL
+*.tf linguist-language=HCL
