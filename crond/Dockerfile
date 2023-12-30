@@ -1,5 +1,8 @@
 FROM alpine:3.18 AS runtine
 
+LABEL maintainers="Leryn <leryn1122@gmail.com>"
+LABEL description="crond"
+
 RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g" /etc/apk/repositories \
  && apk add --update --no-cache \
       bash \
